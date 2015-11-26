@@ -1,0 +1,10 @@
+{
+  "name": "javascript-bdd",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  },
+  "scripts": {
+      "test": "jasmine"
+  }
+}
