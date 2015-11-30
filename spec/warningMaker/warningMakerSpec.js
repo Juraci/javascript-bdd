@@ -4,7 +4,11 @@ describe('warningMaker', function (){
 
     it('returns a warning message for a given obstacle', function (){
         alert = jasmine.createSpy('alert');
-        warningMaker('ufo', alert)(3, 'forest');
-        expect(alert).toHaveBeenCalledWith("Beware! There have been ufo sightings in the Cove today!\n3 have been spotted at the forest!");
+        var ufoWarning = warningMaker('ufo', alert);
+        ufoWarning(1, 'lake');
+        ufoWarning(3, 'forest');
+        expect(alert).toHaveBeenCalledWith("Beware! There have been ufo sightings in the Cove today!" +
+                                           "\n" + "3 have been spotted at the forest!" +
+                                           " This is alert #2 today for ufo danger.");
     });
 });
