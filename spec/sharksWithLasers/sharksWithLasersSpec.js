@@ -16,7 +16,7 @@ describe('sharksWithLasers', function (){
         alert = jasmine.createSpy('alert');
     });
 
-    it('should alert a message when the indexes matches', function (){
+    it('should alert a given message for a given shark', function (){
         var getTargetFor = makeTargetAssigner(listOfSharks, listOfTargets, alert);
         getTargetFor("Ice Teeth");
         expect(alert).toHaveBeenCalledWith("What up, Ice Teeth!\n" +
